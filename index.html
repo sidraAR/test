@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Q#1: write a function greet user that takes name and time of day as inpute and return a message?
+        function greet() {
+            let name = prompt("enter your name?");
+            let time =  prompt("enter time of day?")
+            return "hello"
+        }
+        let result = greet();
+        console.log(result);
+        // Q#2
+        function createCounter() {
+    let count = 0;
+
+    return {
+        increment: function() {
+            count++;
+            return count;
+        },
+        reset: function() {
+            count = 0;
+            return count;
+        }
+    };
+        }
+const counter = createCounter();
+console.log(counter.increment()); 
+console.log(counter.increment()); 
+console.log(counter.reset()); 
+// Q#3
+const user = { name: 'John', age: 25, city: 'New York' };
+
+function displayuser({ name = 'Anonymous', city = 'Unknown' }) {
+    console.log(`Name: ${name}, City: ${city}`);
+}
+displayuser(user)
+// debugging
+const add = (a, b) => a + b;
+console.log(add(6, 3));
+// Q#4
+const myPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('Success!');
+    }, 1000);
+})
+myPromise
+    .catch((error) => {
+        console.error(error);
+    });
+myPromise.then((result) =>{
+    console.log(result)
+})
+
+
+    </script>
+</body>
+</html>
